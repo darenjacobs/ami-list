@@ -7,16 +7,9 @@ from botocore.exceptions import ClientError
 from collections import OrderedDict
 from prettytable import PrettyTable
 
-default_region = 'us-east-1'
-valid_regions = ['ap-south-1', 'eu-west-3', 'eu-west-2', 'eu-west-1',
-                 'ap-northeast-2', 'ap-northeast-1', 'sa-east-1',
-                 'ca-central-1', 'ap-southeast-1', 'ap-southeast-2',
-                 'eu-central-1', 'us-east-1', 'us-east-2', 'us-west-1',
-                 'us-west-2']
-
 
 def parse_args():
-
+    default_region = 'us-east-1'
     help_text = ('List FHLBNY AMI images and EC2 instances attached AMI'
                  ' Images. By default BOTO3 establishes connections in the'
                  ' following order:\n1. Credential passed as argumetns to'
@@ -45,6 +38,11 @@ def parse_args():
 
 
 def start_session(Args):
+    valid_regions = ['ap-south-1', 'eu-west-3', 'eu-west-2', 'eu-west-1',
+                     'ap-northeast-2', 'ap-northeast-1', 'sa-east-1',
+                     'ca-central-1', 'ap-southeast-1', 'ap-southeast-2',
+                     'eu-central-1', 'us-east-1', 'us-east-2', 'us-west-1',
+                     'us-west-2']
     global region
     aws_key = Args.aws_key
     aws_secret = Args.aws_secret
@@ -62,6 +60,7 @@ def start_session(Args):
               'Secret Key. Please provide both.')
         sys.exit(1)
 
+    # Check for valid region
     if region not in valid_regions:
         print('Error: Invalid AWS Region, %s' % region)
         sys.exit(1)
