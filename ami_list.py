@@ -120,6 +120,9 @@ def list_ami():
 
 def print_table():
     table = list_ami()
+    if len(str(table)) < 609:
+        print('There are no AMI images in region %s' % region)
+        sys.exit(0)
     filename = ("ami_list-%s.txt" % region)
     target = open(filename, 'w')
     print('Writing table to file %s' % filename)
