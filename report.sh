@@ -3,7 +3,6 @@ export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY
 export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_KEY
 
 pip install boto3 PrettyTable PTable termcolor --upgrade --user
-git clone https://github.com/darenjacobs/ami-list.git
 
 echo "#################"
 echo "US EAST Region 1"
