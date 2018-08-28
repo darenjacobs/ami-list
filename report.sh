@@ -13,6 +13,6 @@ do
   python ./ami-list/ami_list.py -r ${region}
   python ./ami-list/ec2-state.py
   echo "#################"
-  echo "\n\n"
+  echo -e "\n\n"
 done
 
