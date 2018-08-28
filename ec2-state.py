@@ -25,5 +25,6 @@ for i in ec2.instances.all():
             colored(i.image_id, 'yellow')
         ))
 
-print("\nRunning: {0} Stopped: {1}".format(colored(c['running'], 'green'),
-                                           colored(c['stopped'], 'red')))
+if c['running'] or c['stoppped']:
+    print("\nRunning: {0} Stopped: {1}".format(colored(c['running'], 'green'),
+                                               colored(c['stopped'], 'red')))
