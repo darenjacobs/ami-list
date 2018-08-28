@@ -5,7 +5,7 @@ export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_KEY
 pip install boto3 PrettyTable PTable termcolor --upgrade --user
 
 
-for region in ["us-east-1", "us-east-2", "us-west-2"]
+for region in [ "us-east-1", "us-east-2", "us-west-2" ]
 do
   echo "#################"
   echo "REGION: ${region}"
