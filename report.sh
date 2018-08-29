@@ -7,12 +7,12 @@ pip install boto3 PrettyTable PTable termcolor --upgrade --user
 
 for region in us-east-1 us-east-2 us-west-2 us-west-1
 do
-  echo "#################"
+  echo "#####################################################################"
   echo "REGION: ${region}"
   export AWS_DEFAULT_REGION=${region}
   python ./ami-list/ami_list.py -r ${region}
   python ./ami-list/ec2-state.py
-  echo "#################"
+  echo "#####################################################################"
   echo -e "\n\n"
 done
 
