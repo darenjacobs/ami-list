@@ -3,7 +3,7 @@
 import boto3
 from termcolor import colored
 from collections import Counter
-from operator import itemgetter, attrgetter
+from operator import itemgetter
 
 c = Counter(running=0, stopped=0)
 instances = {}
@@ -11,7 +11,6 @@ my_dict = []
 
 ec2 = boto3.resource('ec2')
 for i in ec2.instances.all():
-    # print(i.id)
     instances = {'id': i.id, 'state': i.state['Name'], 'image': i.image_id}
     my_dict.append(instances)
 
@@ -24,8 +23,12 @@ for i in ec2.instances.all():
 
 sorted_list = sorted(my_dict, key=itemgetter('state'))
 
-# my_list = sorted(instances, key=lambda key: instances[key])
-print(sorted_list)
+for i in sorted_list:
+    print("ID: {0}\tState: {1}\tAMI ID: {2}".format(colored(i['id'], 'cyan'),
+                                                    colored(i['state'],
+                                                    'green'),
+                                                    colored(i['image'],
+                                                    'yellow')))
 
 if c['running'] or c['stopped']:
     print("\nRunning: {0} Stopped: {1}".format(colored(c['running'], 'green'),
