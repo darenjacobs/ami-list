@@ -24,23 +24,20 @@ sorted_list = sorted(array, key=itemgetter('state'))
 
 for i in sorted_list:
     if i['state'] == "running":
-        print("ID: {0}\tState: {1}\tAMI ID: {2}".format(colored(i['id'],
-                                                        'cyan'),
-                                                        colored(i['state'],
-                                                        'green'),
-                                                        colored(i['image'],
-                                                        'yellow')))
+        print("ID: {0}\tState: {1}\tAMI ID: {2}".format(
+            colored(i['id'], 'cyan'),
+            colored(i['state'], 'green'),
+            colored(i['image'], 'yellow')))
 
     elif i['state'] == "stopped":
-        print("ID: {0}\tState: {1}\tAMI ID: {2}".format(colored(i['id'],
-                                                        'cyan'),
-                                                        colored(i['state'],
-                                                        'red'),
-                                                        colored(i['image'],
-                                                        'yellow')))
+        print("ID: {0}\tState: {1}\tAMI ID: {2}".format(
+            colored(i['id'], 'cyan'),
+            colored(i['state'], 'red'),
+            colored(i['image'], 'yellow')))
     else:
         print('ERROR: running state unknown')
 
 if c['running'] or c['stopped']:
-    print("\nRunning: {0} Stopped: {1}".format(colored(c['running'], 'green'),
-                                               colored(c['stopped'], 'red')))
+    print("\nRunning: {0} Stopped: {1}".format(
+        colored(c['running'], 'green'),
+        colored(c['stopped'], 'red')))
