@@ -24,20 +24,14 @@ def print_instance_list(*args):
             state_color = 'green'
         else:
             state_color = 'red'
+
         if i['Name']:
-            print("Name: {0}\tID: {1}\tState: {2}\tAMI ID: {3}\tType:\
-                  {4}".format(
-                colored(i['Name'], 'white'),
-                colored(i['id'], 'cyan'),
-                colored(i['state'], state_color),
-                colored(i['image'], 'yellow'),
-                colored(i['type'], 'cyan')))
-        else:
-            print("ID: {0}\tState: {1}\tAMI ID: {2}\tType: {3}".format(
-                colored(i['id'], 'cyan'),
-                colored(i['state'], state_color),
-                colored(i['image'], 'yellow'),
-                colored(i['type'], 'cyan')))
+            print("Name: {0}".format(colored(i['Name']), 'white')),
+        print("ID: {0}\tState: {1}\tAMI ID: {2}\tType: {3}".format(
+            colored(i['id'], 'cyan'),
+            colored(i['state'], state_color),
+            colored(i['image'], 'yellow'),
+            colored(i['type'], 'cyan')))
 
     if c_running or c_stopped:
         print("\nRunning: {0} Stopped: {1}".format(
