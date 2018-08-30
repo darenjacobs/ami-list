@@ -9,7 +9,7 @@ from operator import itemgetter
 def get_instance_name(id):
     ec2 = boto3.resource('ec2')
     ec2_instance = ec2.Instance(id)
-    instance_name = 'N/A          '
+    instance_name = ''
     for tag in ec2_instance.tags or []:
         if tag["Key"] == 'Name':
             instance_name = tag["Value"]
@@ -24,12 +24,20 @@ def print_instance_list(*args):
             state_color = 'green'
         else:
             state_color = 'red'
-        print("Name: {0}\t ID: {1}\tState: {2}\tAMI ID: {3}\tType: {4}".format(
-            colored(i['Name'], 'white'),
-            colored(i['id'], 'cyan'),
-            colored(i['state'], state_color),
-            colored(i['image'], 'yellow'),
-            colored(i['type'], 'cyan')))
+        if i['Name']:
+            print("Name: {0}\tID: {1}\tState: {2}\tAMI ID: {3}\tType:\
+                  {4}".format(
+                colored(i['Name'], 'white'),
+                colored(i['id'], 'cyan'),
+                colored(i['state'], state_color),
+                colored(i['image'], 'yellow'),
+                colored(i['type'], 'cyan')))
+        else:
+            print("ID: {0}\tState: {1}\tAMI ID: {2}\tType: {3}".format(
+                colored(i['id'], 'cyan'),
+                colored(i['state'], state_color),
+                colored(i['image'], 'yellow'),
+                colored(i['type'], 'cyan')))
 
     if c_running or c_stopped:
         print("\nRunning: {0} Stopped: {1}".format(
