@@ -17,7 +17,7 @@ def get_instance_name(id):
 
 
 def print_instance_list(*args):
-    ec2_list, c_running, c_stopped = args
+    ec2_list, count_running, count_stopped = args
     state_color = ''
     for i in ec2_list:
         if i['state'] == 'running':
@@ -33,10 +33,10 @@ def print_instance_list(*args):
             colored(i['image'], 'yellow'),
             colored(i['type'], 'cyan')))
 
-    if c_running or c_stopped:
+    if count_running or count_stopped:
         print("\nRunning: {0} Stopped: {1}".format(
-            colored(c_running, 'green'),
-            colored(c_stopped, 'red')))
+            colored(count_running, 'green'),
+            colored(count_stopped, 'red')))
 
 
 def get_instance_list():
