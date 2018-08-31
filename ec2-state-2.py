@@ -26,8 +26,8 @@ def print_instance_list(*args):
             state_color = 'red'
 
         if i['Name']:
-            print("Name: {0}".format(colored(i['Name']), 'white')),
-        print("ID: {0}\tState: {1}\tAMI ID: {2}\tType: {3}".format(
+            print("Name: {:<30s}".format(colored(i['Name']), 'white')),
+        print("ID: {:<30s} State: {} AMI ID: {} Type: {}".format(
             colored(i['id'], 'cyan'),
             colored(i['state'], state_color),
             colored(i['image'], 'yellow'),
