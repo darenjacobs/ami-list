@@ -6,8 +6,10 @@ from collections import Counter
 from operator import itemgetter
 
 
+ec2 = boto3.resource('ec2')
+
+
 def get_instance_name(id):
-    ec2 = boto3.resource('ec2')
     ec2_instance = ec2.Instance(id)
     instance_name = ''
     for tag in ec2_instance.tags or []:
@@ -26,9 +28,13 @@ def print_instance_list(*args):
             state_color = 'red'
 
         if i['Name']:
-            print("Name: {:<30s}".format(colored(i['Name']), 'white')),
-        print("ID: {:<30s} State: {} AMI ID: {} Type: {}".format(
-            colored(i['id'], 'cyan'),
+            print("Name: {:<40s} ID: {:<40s}".format(
+                colored(i['Name'], 'white'),
+                colored(i['id'], 'cyan'))),
+        else:
+            print(' '*37),
+            print("ID: {:<40s}".format(colored(i['id'], 'cyan'))),
+        print("State: {} AMI ID: {} Type: {}".format(
             colored(i['state'], state_color),
             colored(i['image'], 'yellow'),
             colored(i['type'], 'cyan')))
@@ -42,7 +48,6 @@ def print_instance_list(*args):
 def get_instance_list():
     c = Counter(running=0, stopped=0)
     array = []
-    ec2 = boto3.resource('ec2')
     for i in ec2.instances.all():
         instance_name = get_instance_name(i.id)
         instances = {'Name': instance_name, 'id': i.id,
