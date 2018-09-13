@@ -11,7 +11,7 @@ do
   echo "REGION: ${region}"
   export AWS_DEFAULT_REGION=${region}
   python ./ami-list/ami_list.py -r ${region}
-  python ./ami-list/ec2-state.py
+  python ./ami-list/ec2-state-2.py
   echo "#####################################################################"
   echo -e "\n\n"
 done
