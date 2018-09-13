@@ -29,7 +29,7 @@ def print_instance_list(*args):
 
         if i['Name']:
             print("Name: {:<40s} ID: {:<40s}".format(
-                colored(i['Name'], 'white'),
+                colored(i['Name'], 'blue'),
                 colored(i['id'], 'cyan'))),
         else:
             print(' '*37),
