@@ -1,0 +1,50 @@
++--------------------------------------------------------------------------------------------+
+|                            FHLBNY AMI Images region: us-east-1                             |
++-----------------------+-----------------------+-----------------------+--------------------+
+| FHLBNY AMI Images     |  EC2 attached Images  |  UnusedFHLBNY Images  | Used FHLBNY Images |
++-----------------------+-----------------------+-----------------------+--------------------+
+| ami-01770817          |      ami-00a11e68     |      ami-01770817     |       ami-2cb2183a |
+| ami-01792717          |      ami-013e197b     |      ami-01792717     |       ami-59639e34 |
+| ami-0418d5c512049a93d |      ami-027db478     | ami-0418d5c512049a93d |       ami-a82b01be |
+| ami-0967521f          |      ami-0b33d91d     |      ami-0967521f     |                    |
+| ami-0d720e1b          | ami-0ba4f5e36dcf03e01 |      ami-0d720e1b     |                    |
+| ami-10faa706          |      ami-188d6e0e     |      ami-10faa706     |                    |
+| ami-1992b80f          |      ami-1d29e970     |      ami-1992b80f     |                    |
+| ami-19c5980f          |      ami-2051294a     |      ami-19c5980f     |                    |
+| ami-24ff8232          |      ami-26bc5e30     |      ami-24ff8232     |                    |
+| ami-25189732          |      ami-27a58d5c     |      ami-25189732     |                    |
+| ami-2cb2183a          |      ami-28f4fb57     |      ami-3ab8972c     |                    |
+| ami-3ab8972c          |      ami-2a9a1655     |      ami-3c348c2a     |                    |
+| ami-3c348c2a          |      ami-2cb2183a     |      ami-45146b53     |                    |
+| ami-45146b53          |      ami-3060d526     |      ami-451f3553     |                    |
+| ami-451f3553          |      ami-3118fa4c     |      ami-47b2ed51     |                    |
+| ami-47b2ed51          |      ami-4275bc38     |      ami-4c98b25a     |                    |
+| ami-4c98b25a          |      ami-43a15f3e     |      ami-52a98b44     |                    |
+| ami-52a98b44          |      ami-4fffc834     |      ami-53207c45     |                    |
+| ami-53207c45          |      ami-564c3140     |      ami-60143276     |                    |
+| ami-59639e34          |      ami-59639e34     |      ami-62a28374     |                    |
+| ami-60143276          |      ami-6871a115     |      ami-79fed86f     |                    |
+| ami-62a28374          |      ami-713cfc1c     |      ami-867e5190     |                    |
+| ami-79fed86f          |      ami-74a73263     |      ami-8bb7fb9d     |                    |
+| ami-867e5190          |      ami-78a43c6f     |      ami-8e562b98     |                    |
+| ami-8bb7fb9d          |      ami-91924aee     |      ami-96b30e80     |                    |
+| ami-8e562b98          |      ami-94920783     |      ami-a60229b0     |                    |
+| ami-96b30e80          |      ami-9e2f0988     |      ami-b76817a1     |                    |
+| ami-a60229b0          |      ami-a51c57b2     |      ami-bd0c50ab     |                    |
+| ami-a82b01be          |      ami-a82b01be     |      ami-d18ba7c7     |                    |
+| ami-b76817a1          |      ami-a8d369c0     |      ami-d77c00c1     |                    |
+| ami-bd0c50ab          |      ami-abf616bd     |      ami-dba3fccd     |                    |
+| ami-d18ba7c7          |      ami-bf934bc0     |      ami-e592bef3     |                    |
+| ami-d77c00c1          |      ami-c6e9d9bd     |      ami-e5fdb1f3     |                    |
+| ami-dba3fccd          |      ami-c96171b6     |      ami-e71137f1     |                    |
+| ami-e592bef3          |      ami-c998b6b2     |      ami-eb520efd     |                    |
+| ami-e5fdb1f3          |      ami-d79d92c1     |      ami-f0446ee6     |                    |
+| ami-e71137f1          |      ami-dbd611a6     |      ami-fb2e72ed     |                    |
+| ami-eb520efd          |      ami-df8944b2     |      ami-fbe7c3ed     |                    |
+| ami-f0446ee6          |      ami-e17a958c     |      ami-fccceaea     |                    |
+| ami-fb2e72ed          |      ami-e196b0f7     |                       |                    |
+| ami-fbe7c3ed          |      ami-eb1ecd96     |                       |                    |
+| ami-fccceaea          |      ami-f0df538f     |                       |                    |
+|                       |      ami-f6396de1     |                       |                    |
+|                       |      ami-f6529b8c     |                       |                    |
++-----------------------+-----------------------+-----------------------+--------------------+
