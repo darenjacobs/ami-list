@@ -9,6 +9,7 @@ from prettytable import PrettyTable
 
 
 def parse_args():
+    """ Get the args """
     default_region = 'us-east-1'
     help_text = ('List FHLBNY AMI images and EC2 instances attached AMI'
                  ' Images. By default BOTO3 establishes connections in the'
